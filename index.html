@@ -20,19 +20,38 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    #terrabrasillis-map {
-      width: 100%; 
-      height: 800px; 
-    }
+
+      #view-source {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+      }
+
+      #terrabrasillis-map {
+        width: 100%; 
+        height: 800px; 
+      }
+
+      .leaflet-control-layers-selector {
+        float: left !important;
+      }
+
+      .android-logo-image {
+        height: 37px;
+        width: 45px;
+      }
+
+      .mdl-dialog {
+        max-width: 70%;
+        max-height: 70%;
+        width: 70%;
+        height: 70%;
+        border-radius: 0;
+      }
     </style>
   </head>
   <body>
@@ -56,10 +75,11 @@
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TOOL</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TOOL</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TOOL</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TOOL</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase init-chart" href="#">DASHBOARD</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#about-project">PROJECT</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -99,14 +119,15 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div id="terrabrasillis-map" class="mdl-typography--text-center">
-          <!--
+        <!--
           <div class="logo-font android-slogan">be together. not the same.</div>
           <div class="logo-font android-sub-slogan">welcome to android... be yourself. do your thing. see what's going on.</div>
+        
           <div class="logo-font android-create-character">
             <a href=""><img src="images/andy.png"> create your android character</a>
           </div>
-
-          <a href="#screens">
+        
+          <a href="#about-project">
             <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
               <i class="material-icons">expand_more</i>
             </button>
@@ -183,23 +204,24 @@
           <div class="android-customized-section-image"></div>
         </div>
         -->
-        <!--
+       
         <div class="android-more-section">
-          <div class="android-section-title mdl-typography--display-1-color-contrast">More from Android</div>
+          <a name="about-project"></a>
+          <div class="android-section-title mdl-typography--display-1-color-contrast">More about project</div>
           <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-1.png">
+                <img src="images/deter.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Get going on Android</h4>
+                 <h4 class="mdl-card__title-text">Data</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Four tips to make your switch to Android quick and easy</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Nam non pharetra urna, commodo faucibus massa. Curabitur sollicitudin hendrerit ligula, ac ullamcorper augue efficitur eget. Cras metus mi, sagittis sit amet cursus vitae, tristique in leo.</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Make the switch
+                   LINK
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -207,17 +229,17 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-4.png">
+                <img src="images/deter.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Create your own Android character</h4>
+                 <h4 class="mdl-card__title-text">Projects</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Nam non pharetra urna, commodo faucibus massa. Curabitur sollicitudin hendrerit ligula, ac ullamcorper augue efficitur eget. Cras metus mi, sagittis sit amet cursus vitae, tristique in leo.</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   androidify.com
+                   LINK
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -225,17 +247,17 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-2.png">
+                <img src="images/deter.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
+                 <h4 class="mdl-card__title-text">Downloads</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Nam non pharetra urna, commodo faucibus massa. Curabitur sollicitudin hendrerit ligula, ac ullamcorper augue efficitur eget. Cras metus mi, sagittis sit amet cursus vitae, tristique in leo.</span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Download now
+                   Link
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
@@ -243,24 +265,25 @@
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="images/more-from-3.png">
+                <img src="images/deter.jpg">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Millions to choose from</h4>
+                 <h4 class="mdl-card__title-text">Resources</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec justo non metus molestie vehicula ac vel eros. Praesent mollis urna eros, et maximus magna semper sed. </span>
               </div>
               <div class="mdl-card__actions">
                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                   Find apps
+                   Link
                    <i class="material-icons">chevron_right</i>
                  </a>
               </div>
             </div>
           </div>
         </div>
-        -->
+        
+        <!-- FOOTER -->
         <footer class="android-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--left-section">
@@ -310,7 +333,35 @@
     <!--<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>-->
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
     <!-- <script src='http://christippett.github.io/leaflet-material/leaflet-material.min.js'></script> -->
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <!-- <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script> -->
     <script src="map.js"></script>
+    <script src="charts.js"></script>
+
+    <dialog id="dialog" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Dialog</h3>
+        <div id="content" class="mdl-dialog__content">      
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button">Close</button>
+          <button type="button" class="mdl-button" disabled>Disabled action</button>
+        </div>
+    </dialog>
+
+    <dialog id="dialog-chart" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Chart</h3>
+        <div id="container" class="mdl-dialog__content">      
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button close-chart">Close</button>
+        </div>
+    </dialog>
+
   </body>
 </html>
