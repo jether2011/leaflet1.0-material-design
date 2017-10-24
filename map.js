@@ -33,7 +33,7 @@ function initMap(){
     }
 
     // define the openstreetmap as main map layer    
-    baseLayers.OSM.addTo(map);
+    baseLayers.OSM_Black.addTo(map);
 
     // overlayers
     var forest_2016 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
@@ -44,6 +44,12 @@ function initMap(){
 
     var deforestation = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
         layers: 'fip-project-prodes:deforestation',
+        format: 'image/png',
+        transparent: true
+    });
+
+    var deforestation19882012 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
+        layers: 'fip-project-prodes:deforestation_1988_2012',
         format: 'image/png',
         transparent: true
     });
@@ -60,12 +66,20 @@ function initMap(){
         transparent: true
     });
 
-    var overlayersGroup = L.layerGroup([forest_2016, deforestation]);
+    var cloud2016 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
+        layers: 'fip-project-prodes:cloud_2016',
+        format: 'image/png',
+        transparent: true
+    });
+
+    var overlayersGroup = L.layerGroup([forest_2016, deforestation, deforestation19882012]);
      
     var overLayers = {
         'Products' : overlayersGroup,
         'Hydrography' : hydrography,
-        'No Forest' : noForest
+        'No Forest' : noForest,
+        'Deforestation 1988_2012' : deforestation19882012,
+        'Cloud 2016' : cloud2016
     }
 
     // define a layer to be the actived layer    
