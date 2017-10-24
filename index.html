@@ -45,13 +45,27 @@
         width: 45px;
       }
 
-      .mdl-dialog {
+      /* .mdl-dialog {
         max-width: 70%;
         max-height: 70%;
         width: 70%;
         height: 70%;
         border-radius: 0;
+      } */
+
+      .leaflet-container { 
+        background-color: #fff;
       }
+
+      #container {
+        max-width: 70%;
+        max-height: 70%;
+        width: 70%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
     </style>
   </head>
   <body>
@@ -78,7 +92,7 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase init-chart" href="#">DASHBOARD</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#init-chart">DASHBOARD</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#about-project">PROJECT</a>
             </nav>
           </div>
@@ -89,7 +103,7 @@
             <i class="material-icons">more_vert</i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item">Link #1</li>
+            <li class="mdl-menu__item login">Login</li>
             <li disabled class="mdl-menu__item">Link #2</li>
           </ul>
         </div>
@@ -191,19 +205,6 @@
           </div>
         </div>
         -->
-        <!--
-        <div class="android-customized-section">
-          <div class="android-customized-section-text">
-            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you</div>
-            <p class="mdl-typography--font-light">
-              Put the stuff that you care about right on your home screen: the latest news, the weather or a stream of your recent photos.
-              <br>
-              <a href="" class="android-link mdl-typography--font-light">Customise your phone</a>
-            </p>
-          </div>
-          <div class="android-customized-section-image"></div>
-        </div>
-        -->
        
         <div class="android-more-section">
           <a name="about-project"></a>
@@ -282,6 +283,34 @@
             </div>
           </div>
         </div>
+
+        <!-- DASHBOARD --> 
+        <div class="android-customized-section">
+          <div class="mdl-mega-footer--top-section">
+            <!-- <div class="mdl-mega-footer--left-section">
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+              &nbsp;
+              <button class="mdl-mega-footer--social-btn"></button>
+            </div> -->
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+          <a name="init-chart"></a>
+          <div class="android-customized-section-text">
+            <div class="android-section-title mdl-typography--display-1-color-contrast">Dashboard for a specific data</div>
+            <br/>
+            <br/>
+          </div>
+          <div id="container"></div>          
+          <br/>
+          <br/>
+        </div>         
         
         <!-- FOOTER -->
         <footer class="android-footer mdl-mega-footer">
@@ -343,6 +372,7 @@
     <script src="http://code.highcharts.com/maps/modules/map.js"></script> -->
     <script src="map.js"></script>
     <script src="charts.js"></script>
+    <script src="login.js"></script>
 
     <dialog id="dialog" class="mdl-dialog">
         <h3 class="mdl-dialog__title">Dialog</h3>
@@ -354,12 +384,12 @@
         </div>
     </dialog>
 
-    <dialog id="dialog-chart" class="mdl-dialog">
-        <h3 class="mdl-dialog__title">Chart</h3>
-        <div id="container" class="mdl-dialog__content">      
+    <dialog id="dialog-login" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Login</h3>
+        <div id="content" class="mdl-dialog__content">      
         </div>
         <div class="mdl-dialog__actions">
-          <button type="button" class="mdl-button close-chart">Close</button>
+          <button type="button" class="mdl-button close-login">Send</button>
         </div>
     </dialog>
 

@@ -24,7 +24,10 @@ function initMap(){
         minZoom: 4
     });
 
+    var empty = L.tileLayer('');
+    
     var baseLayers = {
+        'Blank': empty,
         'OSM' : openstreetmap,
         'OSM_Black' : openStreetMapBlackAndWhite
     }

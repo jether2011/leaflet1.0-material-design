@@ -1,22 +1,10 @@
-$( document ).ready(function(){   
-    var dialogButton = document.querySelector('.init-chart');
-
-    var closeChartButton = $('.close-chart').on('click', function(){
-        dialog.close();
-    });
-    
-    var dialog = document.querySelector('#dialog-chart');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-
-    dialogButton.addEventListener('click', function() {
-       dialog.showModal();
-       initChart();
-    });
-
+$( document ).ready(function(){       
+    initChart();
 });
 
+/**
+ * https://api.highcharts.com/highcharts/chart.borderColor
+ */
 function initChart() {        
     $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=world-population.json&callback=?', function (data) {
         
@@ -29,7 +17,7 @@ function initChart() {
         
             Highcharts.mapChart('container', {
                 chart: {
-                    borderWidth: 1,
+                    borderWidth: 0,
                     map: 'custom/world'
                 },
         
