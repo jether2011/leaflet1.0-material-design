@@ -77,9 +77,11 @@ function initMap(){
     var overLayers = {
         'Products' : overlayersGroup,
         'Hydrography' : hydrography,
-        'No Forest' : noForest,
-        'Deforestation 1988_2012' : deforestation19882012,
-        'Cloud 2016' : cloud2016
+        'No Forest' : noForest,        
+        'Cloud 2016' : cloud2016,
+        'Forest 2016' : forest_2016,
+        'Deforestation' : deforestation,
+        'Deforestation 1988_2012' : deforestation19882012
     }
 
     // define a layer to be the actived layer    
