@@ -49,7 +49,7 @@ function initMap(){
     });
 
     var deforestation19882012 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
-        layers: ' 	fip-project-prodes:accumulated_deforestation_1988_2012 ',
+        layers: 'fip-project-prodes:accumulated_deforestation_1988_2012',
         format: 'image/png',
         transparent: true
     });
