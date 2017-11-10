@@ -1,4 +1,4 @@
-$( document ).ready(function(){   
+$( document ).ready(function(){  
     initMap();
 });
 
@@ -38,6 +38,12 @@ function initMap(){
     // overlayers
     var forest_2016 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
         layers: 'fip-project-prodes:forest_2016',
+        format: 'image/png',
+        transparent: true
+    });
+
+    var forest_2017 = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
+        layers: 'fip-project-prodes:forest_2017',
         format: 'image/png',
         transparent: true
     });
@@ -87,6 +93,7 @@ function initMap(){
         'Cloud 2016' : cloud2016,
         'Cloud 2017' : cloud2017,
         'Forest 2016' : forest_2016,
+        'Forest 2017 (Parcial 95 cenas)': forest_2017,
         'Deforestation' : deforestation,
         'Deforestation 1988_2012' : deforestation19882012
     }

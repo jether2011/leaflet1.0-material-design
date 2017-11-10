@@ -301,8 +301,8 @@
               </a>
             </div>
           </div>
-          <a name="init-chart"></a>
-          <div class="android-customized-section-text">
+          <!-- <a name="init-chart"></a> -->
+          <div id="init-chart" class="android-customized-section-text">
             <div class="android-section-title mdl-typography--display-1-color-contrast">Dashboard for a specific data</div>
             <br/>
             <br/>
@@ -393,5 +393,20 @@
         </div>
     </dialog>
 
+
+    <script>
+        $('.mdl-navigation a[href^="#"]').on('click', function(e) {
+            console.log("cliquei no href");
+            e.preventDefault();
+            var id = $(this).attr('href');
+            console.log(id);
+
+            var targetOffset = $(id).offset().top;
+                    
+            $('html, body').animate({ 
+                scrollTop: targetOffset - 100
+            }, 500);
+        });
+    </script>
   </body>
 </html>
