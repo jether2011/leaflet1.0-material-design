@@ -92,8 +92,8 @@
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">TOOL</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#init-chart">DASHBOARD</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#about-project">PROJECT</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase suaveScroll" href="#init-chart">DASHBOARD</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase suaveScroll" href="#about-project">PROJECT</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -207,8 +207,9 @@
         -->
        
         <div class="android-more-section">
-          <a name="about-project"></a>
-          <div class="android-section-title mdl-typography--display-1-color-contrast">More about project</div>
+          <!-- <a id="about-project"></a> -->
+          <div id="about-project" 
+            class="android-section-title mdl-typography--display-1-color-contrast">More about project</div>
           <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
@@ -301,7 +302,7 @@
               </a>
             </div>
           </div>
-          <!-- <a name="init-chart"></a> -->
+          <!-- <a id="init-chart"></a> -->
           <div id="init-chart" class="android-customized-section-text">
             <div class="android-section-title mdl-typography--display-1-color-contrast">Dashboard for a specific data</div>
             <br/>
@@ -393,20 +394,24 @@
         </div>
     </dialog>
 
+    <script>        
+        $(document).ready(function(){
+          $(".suaveScroll.a").on('click', function(event){
+            event.preventDefault();   
+            var anchor = $(this);
+            var id     = anchor.attr('href');
+            var top    = $(id).offset().top;
 
-    <script>
-        $('.mdl-navigation a[href^="#"]').on('click', function(e) {
-            console.log("cliquei no href");
-            e.preventDefault();
-            var id = $(this).attr('href');
+            console.log(anchor);
             console.log(id);
-
-            var targetOffset = $(id).offset().top;
-                    
-            $('html, body').animate({ 
-                scrollTop: targetOffset - 100
-            }, 500);
-        });
+            console.log(top);
+            
+            $('html, body').animate({
+              scrollTop: top
+            }, 2000);
+                     
+          });
+        });                
     </script>
   </body>
 </html>
