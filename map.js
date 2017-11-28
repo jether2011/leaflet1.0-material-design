@@ -104,7 +104,7 @@ function initMap(){
     // general
     var options = {
         sortLayers : true,
-        collapsed : false
+        collapsed : true
     }
 
     L.control.layers(baseLayers, overLayers, options).addTo(map);
