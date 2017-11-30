@@ -90,7 +90,7 @@ function initMap(){
         transparent: true
     });
 
-    var overlayersGroup = L.layerGroup([forest_2016, deforestation, deforestation19882012]);
+    var overlayersGroup = L.layerGroup([forest_2016, deforestation, deforestation19882012, amazon_legal_limit]);
      
     var overLayers = {
         'Products' : overlayersGroup,
