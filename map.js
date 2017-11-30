@@ -84,6 +84,12 @@ function initMap(){
         transparent: true
     });
 
+    var amazon_legal_limit = L.tileLayer.wms("http://terrabrasilis.info/fip-service/gwc/service/wms", {
+        layers: 'fip-project-prodes:brazilian_legal_amazon',
+        format: 'image/png',
+        transparent: true
+    });
+
     var overlayersGroup = L.layerGroup([forest_2016, deforestation, deforestation19882012]);
      
     var overLayers = {
@@ -95,7 +101,8 @@ function initMap(){
         'Forest 2016' : forest_2016,
         'Forest 2017 (Parcial 95 cenas)': forest_2017,
         'Deforestation' : deforestation,
-        'Deforestation 1988_2012' : deforestation19882012
+        'Deforestation 1988_2012' : deforestation19882012,
+        'Legal Amazon': amazon_legal_limit
     }
 
     // define a layer to be the actived layer    

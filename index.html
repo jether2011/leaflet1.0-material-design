@@ -33,7 +33,7 @@
 
       #terrabrasillis-map {
         width: 100%; 
-        height: 800px; 
+        height: 851px; 
       }
 
       .leaflet-control-layers-selector {
@@ -66,6 +66,16 @@
         margin-right: auto;
       }
 
+      .android-footer {
+          /* background-color: #fafafa; */
+          position: relative;
+      }
+
+      .mdl-mini-footer {         
+          padding: 5px 5px !important;
+          /*color: #9e9e9e;*/
+          background-color: #424242;
+      }
     </style>
   </head>
   <body>
@@ -299,8 +309,8 @@
         </div>     -->     
         
         <!-- FOOTER -->
-        <footer class="android-footer mdl-mega-footer">
-          <div class="mdl-mega-footer--top-section">
+        <footer class="android-footer mdl-mini-footer">
+          <!-- <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--left-section">
               <button class="mdl-mega-footer--social-btn"></button>
               &nbsp;
@@ -314,14 +324,13 @@
                 <i class="material-icons">expand_less</i>
               </a>
             </div>
-          </div>
+          </div> -->
 
           <div class="mdl-mega-footer--middle-section">
-            <p class="mdl-typography--font-light">Lorem Lorem Lorem: © 2017 Lorem, Lorem Lorem</p>
-            <p class="mdl-typography--font-light">Lorem Lorem Lorem Lorem Lorem Lorem</p>
+            <p class="mdl-typography--font-light">Copyright © TerraBrasilis 2017</p>
           </div>
 
-          <div class="mdl-mega-footer--bottom-section">
+          <!-- <div class="mdl-mega-footer--bottom-section">
             <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
               Link #1 <i class="material-icons">arrow_drop_up</i>
             </a>
@@ -336,7 +345,7 @@
             </ul>
             <a class="android-link mdl-typography--font-light" href="">Link #3</a>
             <a class="android-link mdl-typography--font-light" href="">Link #4</a>
-          </div>
+          </div> -->
 
         </footer>
       </div>
@@ -349,15 +358,15 @@
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
     <!-- <script src='http://christippett.github.io/leaflet-material/leaflet-material.min.js'></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
-    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <!-- <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
-    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script> -->
     <!-- <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/highcharts-more.js"></script>
     <script src="http://code.highcharts.com/maps/modules/map.js"></script> -->
     <script src="map.js"></script>
-    <script src="charts.js"></script>
+    <!-- <script src="charts.js"></script> -->
     <script src="login.js"></script>
 
     <dialog id="dialog" class="mdl-dialog">
